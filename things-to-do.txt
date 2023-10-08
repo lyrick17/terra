@@ -1,0 +1,4 @@
+Things to do:
+    - create sql folder to store:
+        -- mysqli_connect.php
+        -- mysqli_user_connect.php
