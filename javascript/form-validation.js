@@ -79,13 +79,17 @@ function checkRegisterPassword() {
     } else if (password.length < 8) {
         errorElement.innerHTML = " *must be atleast 8 characters";
         regPasswordFilledMatched = false;
-    } else if (cPassword && password != cPassword) {
+    } else if (cPassword && (password != cPassword)) {
         errorElement.innerHTML = " *passwords do not match";
+        regPasswordFilledMatched = false;
+    } else if (!cPassword) {
+        errorElement.innerHTML = "";
         regPasswordFilledMatched = false;
     } else {
         errorElement.innerHTML = "";
         regPasswordFilledMatched = true;
     }
+
     allowRegister();
 }
 
@@ -106,7 +110,7 @@ checkRegisterTerms.addEventListener('change', function() {
 // function checks if all fields are ok to be passed to server and would allow the Register button to be clickable
 function allowRegister() {
     console.log("yey");
-    if (regFNameFilled && regLNameFilled && regPasswordFilledMatched && regTermsChecked) {
+    if (regFNameFilled && regLNameFilled && regEmailFilled && regPasswordFilledMatched && regTermsChecked) {
         document.getElementById('submit').disabled = false;
     } else {
         document.getElementById('submit').disabled = true;
