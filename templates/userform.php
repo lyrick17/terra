@@ -1,9 +1,9 @@
 <!-- Register -->
 <div class="card p-3 p-sm-4 p-lg-5 registerForm collapse show" id="signup">
-    <form action="index.php" method="post">
+    <form action="register.php" method="post">
 
         <!-- This input type determines whether form is register -->
-        <input type="hidden" name="formType" value="register">
+        <input type="hidden" id="formType" name="formType" value="register">
 
         <p class="text-center h3">Welcome to Terra!</p>
         <p class="text-center">take a journey with other people</p>
@@ -105,32 +105,33 @@
 </div>
 
 
-
-
 <!-- Login -->
 <div class="card p-3 p-sm-4 p-lg-5 registerForm collapse" id="login">
-    <form>
+    <form action="register.php" method="post">
+
+        <!-- This input type determines whether form is register -->
+        <input type="hidden" id="formType2" name="formType2" value="login">
+
         <p class="text-center h3">Log In to Terra</p>
         <p class="text-center">take a journey with other people</p>
 
+        
+
         <!-- span element for handling Firstname ERRORS -->
-        <span id="loginError" class="text-danger" style="font-size: 12px; font-style: italic;">invalid email or password</span>
+        <span id="loginError" class="text-danger" style="font-size: 12px; font-style: italic;"></span>
 
         <!-- Username / Email -->
         <div class="form-outline  mb-2">
             <label class="form-label" for="loginUser">Email:</label>
+
             
-            <span id="loginUserError" class="text-danger" style="font-size: 12px; font-style: italic;"></span>
-            
-            <input type="text" id="loginUser" class="form-control" placeholder="Email">
+            <input type="text" id="loginUser" name="loginUser" class="form-control" placeholder="Email">
         </div>
         <!-- Password -->
         <div class="form-outline  mb-2">
             <label class="form-label" for="loginPassword">Password:</label>
 
-            <span id="loginPasswordError" class="text-danger" style="font-size: 12px; font-style: italic;"></span>
-
-            <input type="password" id="loginPassword" class="form-control" placeholder="Password">
+            <input type="password" id="loginPassword" name="loginPassword" class="form-control" placeholder="Password">
         </div>
         <!-- Checkbox -->
         <div class="mb-2">
@@ -138,7 +139,11 @@
         </div>
 
         <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-3 px-5">Log In</button>
+        <input type="submit" 
+                id="submitLogin" 
+                name="submitLogin" 
+                class="btn btn-primary btn-block mb-3 px-5" 
+                value="Log In">
         <div>
             New to Terra? 
             

@@ -1,3 +1,5 @@
+<?php require('sql-connection/mysqli_connect.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +10,7 @@
     <!-- Header -->
     <?php require('templates/header/header-admin.php'); ?>
 
+	
     <!-- Body -->
     <div>
         <!-- Main -->  
@@ -18,7 +21,6 @@
 		<div class="container-fluid w-50">
 		<p>
 		<?php 
-			require('mysqli_connect.php');
 			
 			$q = "SELECT CONCAT(lname, ', ', fname) AS name, email, DATE_FORMAT(registration_date, '%M %d, %Y') AS regdate FROM users ORDER BY registration_date ASC";
 			$result = @mysqli_query($dbcon, $q);

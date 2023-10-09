@@ -10,6 +10,6 @@
         <a href="about.php" class="nav-item nav-link">About</a>
         <a href="contact.php" class="nav-item nav-link">Contact</a>
         <a href="register.php" class="nav-item nav-link">Login / SignUp</a>
-        <a href="register-view-users.php" class="nav-item nav-link">View Users</a>
+        <!-- <a href="register-view-users.php" class="nav-item nav-link">View Users</a> -->
     </div>
 </div>

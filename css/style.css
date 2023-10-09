@@ -3,6 +3,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+
 #navbar {
     background-color: rgba(209, 255, 189, 0.2);
     /*background-color: rgb(250, 249, 246, 0.2); old color */

@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Header -->
-    <?php require('templates/header/header-scroll.php'); ?>
+    <?php require('templates/header/header-home.php'); ?>
 
     <!-- Body -->
     <div>

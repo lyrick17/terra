@@ -10,6 +10,7 @@
     <!-- Header -->
     <?php require('templates/header/header-fixed.php'); ?>
 
+    <?php // Erase Entries, Cancel ?>
     <!-- Body -->
     <div>
         <!-- Main -->  
