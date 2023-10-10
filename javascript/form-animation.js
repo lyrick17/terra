@@ -12,3 +12,25 @@ document.querySelectorAll('.toggle-link').forEach(function(link) {
         });
     });
 });
+
+
+window.onload = function() {
+    let loginError = document.getElementById('loginError').innerHTML;
+    let registerError = document.getElementById('registerError').innerHTML;
+    if (loginError) {
+        //document.querySelector('.toggle-link').click();
+        document.getElementById('login').classList.add('show');
+        document.getElementById('signup').classList.remove('show');
+    } else if (registerError) {
+        document.getElementById('signup').classList.add('show');
+        document.getElementById('login').classList.remove('show');
+    }
+
+    let params = new URLSearchParams(window.location.search);
+
+    if (params.get('login') == 'true') {
+        document.getElementById('login').classList.add('show');
+        document.getElementById('signup').classList.remove('show');
+    }
+
+};

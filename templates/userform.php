@@ -8,6 +8,9 @@
         <p class="text-center h3">Welcome to Terra!</p>
         <p class="text-center">take a journey with other people</p>
 
+        <!-- span element for handling server side register ERRORS -->
+        <span id="registerError" class="text-danger text-center" style="font-size: 12px; font-style: italic;"><?php echo $registerError; ?></span>
+
         <!-- FirstName and LastName -->
         <div class="row my-2">
             <div class="col-lg-6 form-outline  mb-2">
@@ -115,11 +118,9 @@
         <p class="text-center h3">Log In to Terra</p>
         <p class="text-center">take a journey with other people</p>
 
+        <!-- span element for handling login ERRORS -->
+        <span id="loginError" class="text-danger text-center" style="font-size: 12px; font-style: italic;"><?php echo $loginError; ?></span>
         
-
-        <!-- span element for handling Firstname ERRORS -->
-        <span id="loginError" class="text-danger" style="font-size: 12px; font-style: italic;"></span>
-
         <!-- Username / Email -->
         <div class="form-outline  mb-2">
             <label class="form-label" for="loginUser">Email:</label>
