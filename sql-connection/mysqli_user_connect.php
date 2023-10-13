@@ -1,9 +1,7 @@
 <?php 
 require("mysqli_connect.php");
 
-$usernameError = "";
-$emailError = "";
-$passwordError = "";
+$inputError = array("username"=> "", "email"=> "",  "password"=> "");
 
 $registerError = "";
 $loginError = "";
