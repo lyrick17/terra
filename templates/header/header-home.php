@@ -6,6 +6,6 @@
                 <p class="h1">Terra</p>
             </a>
         </div>
-        <?php include('header.php') ?>
+        <?php include('navigation.php') ?>
     </div>
 </nav>

@@ -1,4 +1,7 @@
 Things to do:
-    - create sql folder to store:
-        -- mysqli_connect.php
-        -- mysqli_user_connect.php
+    - create 2 webpages for users
+    - 2 webpages for admins
+    - erase entries button
+    - cancel button
+    - dapat mapupunta sa admin page if admin, sa member page if member
+        - //$url = ($_SESSION['user-level'] === 1) ? "admin-home.php" : "user-home.php";
