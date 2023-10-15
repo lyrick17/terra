@@ -7,6 +7,11 @@
         <a href="member-feed.php" class="nav-item nav-link align-self-center">Feed</a>
         <a href="member-profile.php" class="nav-item nav-link align-self-center">My Profile</a>
         
+        <a href="#" class="nav-item nav-link align-self-center">
+            <button type="button" class="btn btn-success" style="padding: 5px 10px;">
+                Change Password
+            </button>
+        </a>
         <a href="logout.php" class="nav-item nav-link align-self-center">
             <button type="button" class="btn btn-success" style="padding: 5px 10px;">
                 Logout

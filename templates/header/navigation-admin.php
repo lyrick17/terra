@@ -7,6 +7,11 @@
         <a href="admin-dashboard.php" class="nav-item nav-link align-self-center">Dashboard</a>
         <a href="admin-view-users.php" class="nav-item nav-link align-self-center">View Users</a>
         
+        <a href="#" class="nav-item nav-link align-self-center">
+            <button type="button" class="btn btn-success" style="padding: 5px 10px;">
+                Change Password
+            </button>
+        </a>
         <a href="logout.php" class="nav-item nav-link align-self-center">
             <button type="button" class="btn btn-success" style="padding: 5px 10px;">
                 Logout
