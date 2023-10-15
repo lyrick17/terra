@@ -4,7 +4,6 @@ body {
     flex-direction: column;
 }
 
-
 #navbar {
     background-color: rgba(209, 255, 189, 0.2);
     /*background-color: rgb(250, 249, 246, 0.2); old color */
@@ -133,3 +132,13 @@ body {
 .center-vertically {
     text-align: center;
 }
+
+.post-card {
+    margin: 4% 0;
+}
+.post-card img {
+    max-height: 85vh;
+}
+
+
+

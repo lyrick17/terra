@@ -10,3 +10,5 @@ OR die ('Could not connect to MySQLi: '.mysqli_connect_error());
 
 // encoding 
 mysqli_set_charset($dbcon, 'utf8');
+
+session_start();

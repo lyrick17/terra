@@ -55,13 +55,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['formType2']) == 'login
     $pass = (!empty($_POST['loginPassword'])) ? mysqli_real_escape_string($dbcon, trim($_POST['loginPassword'])) : FALSE;
     
     if ($email && $pass) {
-        $q = "SELECT user_id, fname, user_level FROM users WHERE (email = '". $email ."' AND psword = '". md5($pass) . "')";
+        $q = "SELECT user_id, fname, lname, email, user_level, DATE_FORMAT(registration_date, '%M %d, %Y') AS registration_date FROM users WHERE (email = '". $email ."' AND psword = '". md5($pass) . "')";
         $result = @mysqli_query($dbcon, $q);
 
         // count the number of rows that has the same email and password
         switch (@mysqli_num_rows($result)) {
             case 1: // there is only one user
-                session_start();
 
                 // Get all the details of user and put it in a SESSION array
                 // NOTE: everything from DB is string
@@ -69,8 +68,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['formType2']) == 'login
                 $_SESSION = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 $_SESSION['user_level'] = (int) $_SESSION['user_level']; // convert string to integer
 
-                //$url = ($_SESSION['user-level'] === 1) ? "admin-home.php" : "user-home.php";
-                $url = ($_SESSION['user_level'] === 1) ? "register-view-users.php" : "ecofriendly.php";
+                // if user is admin or member
+                $url = ($_SESSION['user_level'] === 1) ? "admin-dashboard.php" : "member-feed.php";
 
                 header("location: " . $url);
                 exit();

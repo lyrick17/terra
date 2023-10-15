@@ -9,7 +9,6 @@
             <a href="#" class="nav-item nav-link px-2">Help</a>
             <a href="about.php" class="nav-item nav-link px-2">About Us</a>
             <a href="contact.php" class="nav-item nav-link px-2">Contact Us</a>
-            <a href="#" class="nav-item nav-link px-2">Feed</a>
         </div>
     </nav>
 </div>
