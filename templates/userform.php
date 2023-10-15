@@ -100,6 +100,7 @@
                 class="btn btn-primary btn-block mb-3 px-5" 
                 value="Register"
                 disabled>
+        <a href="register.php" class="btn btn-secondary btn-block mb-3">Clear Entries</a>
         <div>
             Already have an account? 
             <a href="#login" role="button" data-bs-toggle="collapse" data-bs-target="#login" aria-expanded="false" aria-controls="login" class="toggle-link">Log In</a>
@@ -145,6 +146,7 @@
                 name="submitLogin" 
                 class="btn btn-primary btn-block mb-3 px-5" 
                 value="Log In">
+        <a href="register.php?login=true" class="btn btn-secondary btn-block mb-3">Clear Entries</a>
         <div>
             New to Terra? 
             
