@@ -3,7 +3,9 @@
         <p class="d-flex align-items-center py-3 text-decoration-none" style="color:black;">
             <span class="fs-5 d-none d-sm-inline">
                 Welcome, 
-                <?php if (isset($_SESSION['user_id'])) { echo $_SESSION['fname']; } else { echo "Admin"; }?>
+                <?php if (isset($_SESSION['user_id'])) { 
+					echo "{$_SESSION['fname']} {$_SESSION['lname']}!"; 
+				}?>
             </span>
         </p>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0" id="menu">
@@ -20,6 +22,11 @@
             <li>
                 <a href="admin-view-users.php" class="nav-link px-0">
                     <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline" style="color: black;">View Users</span>
+                </a>
+            </li>
+			<li>
+                <a href="admin-3.php" class="nav-link px-0">
+                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline" style="color: black;">Admin Page 3</span>
                 </a>
             </li>
         </ul>
