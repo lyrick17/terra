@@ -7,7 +7,6 @@
 	}
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +21,7 @@
     <div class="container-fluid">
         <div class="row flex-wrap">
             <!-- Left Sidebar-->
-            <div class="col-12 col-md-3 p-2 border">
+            <div class="col-12 col-md-4 p-2 border">
                 <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
                     <div class="card p-4 w-100">
                         <div class="image d-flex flex-column justify-content-center align-items-center">
@@ -77,72 +76,12 @@
             </div>
             
             <!-- Middle Content-->
-            <div class="col-12 col-md-6 p-5 border" style="margin: 0;">
-                <div class="container-fluid px-5">
-                    
-                    <!-- POST -->
-                    <div class="card post-card">
-                        <button class="w-100 btn btn-success py-3 fs-5">Create New Post</button>
-                    </div>
-                    
-                    <!-- POST -->
-                    <div class="card post-card">
-                        <img src="img-posts/eco-post.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4 class="card-title">Eco-Campaign</h4>
-                            <p class="card-text">Terra's action to create a better environment. Eco-Campaign. Photo by Eyoel Kahssay</p>
-                            <small class="card-text">by Terra Admins, September 30, 2023</small>
-                            <!--<a href="#" class="btn btn-success">Go somewhere</a>-->
-                        </div>
-                    </div>
-
-
-                    <!-- POST -->
-                    <div class="card post-card">
-                        <img src="img-posts/default-no-post.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h2 class="card-title">It's been quiet in your feed.</h2>
-                            <p class="card-text fs-4">Share us your stories now!</p>
-                            <small class="card-text">by Terra Admins</small>
-                            <!--<a href="#" class="btn btn-success">Go somewhere</a>-->
-                        </div>
-                    </div>
-                
-                
-                </div>
+            <div class="col-12 col-md-8 p-5 border" style="margin: 0;">
+                <h1>Anothern Ezztra Spacezah</h1>
+                <h1>Free Space</h1>
             </div>
 
-            <!-- Right Sidebar -->
-            <div class="col-12 col-md-3 p-5 border" style="margin: 0;">
-                <div class="container-fluid">
-                    
-                    <div class="card text-center w-100">
-                        <div class="card-header" style="background-color: #F7BE6D;">
-                            Trending Topics 
-                        </div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    <a href="#">London</a>
-                                </p>
-                                <p class="card-text">
-                                    <a href="#">Philippines</a>
-                                </p>
-                                <p class="card-text">
-                                    <a href="#">Mt. Fuji</a>
-                                </p>
-                                <p class="card-text">
-                                    <a href="#">California</a>
-                                </p>
-                                <p class="card-text">
-                                    <a href="#">Bahay Ko</a>
-                                </p>
-                            </div>
-                        <div class="card-footer text-body-secondary" style="background-color: #F7BE6D;">
-                            @terra
-                        </div>
-                    </div>
-                </div>
-            </div> 
+            
         </div>
         
     </div>

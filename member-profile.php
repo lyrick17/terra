@@ -1,5 +1,11 @@
 <?php require('sql-connection/mysqli_connect.php'); ?>
 
+<?php 
+	if (!isset($_SESSION['user_id']) or ($_SESSION['user_level'] != 0)) {
+		header("location: register.php?login=true");
+		exit();
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,15 +30,14 @@
                             <span class="mt-3">
                                 <?php
                                     if (isset($_SESSION['user_id'])) {
-                                        echo $_SESSION['fname'] . " " . $_SESSION['lname'] ;
+										echo "{$_SESSION['fname']} {$_SESSION['lname']}";
                                     }
-
                                 ?>
                             </span>
                             <span class="mb-3">
                                 <?php
                                     if (isset($_SESSION['user_id'])) {
-                                        echo $_SESSION['email'];
+										echo "{$_SESSION['email']}";
                                     }
                                 ?>
                             </span>
@@ -49,6 +54,9 @@
                                     </li>
                                     <li class="list-group-item">
                                         <a href="member-3.php" class="btn btn-success w-100">Settings</a>
+                                    </li>
+									<li class="list-group-item">
+                                        <a href="member-4.php" class="btn btn-success w-100">Another Page</a>
                                     </li>
                                 </ul>
                             </div>

@@ -1,5 +1,13 @@
 <?php require('sql-connection/mysqli_connect.php'); ?>
 
+<?php 
+	if (!isset($_SESSION['user_id']) or ($_SESSION['user_level'] != 1)) {
+		header("location: register.php?login=true");
+		exit();
+	}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
