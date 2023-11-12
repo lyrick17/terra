@@ -22,7 +22,6 @@
                             <p class="text-center">Thank you for your registration.</p>
 
                             <p class="front-page-font-sm" style="color:black;">We hope <br />you enjoy at Terra.</p>
-                            <p class="text-center">Wala pang log-in eh, wait lang kayo mga userz.</p>
                             <button type="button" class="btn btn-primary btn-block mx-auto">
                                 <a href="index.php" class="text-white link-underline link-underline-opacity-0">Back To Home</a>
                             </button>

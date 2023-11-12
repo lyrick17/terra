@@ -35,14 +35,27 @@
 					<p>
 						<?php 
 							
-							$q = "SELECT CONCAT(lname, ', ', fname) AS name, email, DATE_FORMAT(registration_date, '%M %d, %Y') AS regdate FROM users ORDER BY registration_date ASC";
+							$q = "SELECT CONCAT(lname, ', ', fname) AS name, email, user_id, DATE_FORMAT(registration_date, '%M %d, %Y') AS regdate FROM users ORDER BY registration_date ASC";
 							$result = @mysqli_query($dbcon, $q);
 							
 							if ($result) { // if no error, display results please :))
-								echo '<table class="table table-hover table-bordered table-striped"> <tr class="table-dark"> <td><b>Name</b></td> <td><b>Email</b></td> <td><b>Date Registered</b></td> </tr>';
+								echo '<table class="table table-hover table-bordered table-striped"> 
+										<tr class="table-dark"> 
+											<td><b>Name</b></td> 
+											<td><b>Email</b></td> 
+											<td><b>Date Registered</b></td> 
+											<td><b>Edit</b></td>
+											<td><b>Delete</b></td>
+										</tr>';
 							
 								while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-										echo '<tr class="table-secondary"> <td>' . $row['name'] . '</td> <td>' . $row['email'] . '</td> <td>' . $row['regdate'] . '</td> </tr>';
+										echo '<tr class="table-secondary">' .
+												'<td>' . $row['name'] .    '</td>' .
+												'<td>' . $row['email'] .   '</td>' .
+												'<td>' . $row['regdate'] . '</td>' .
+												'<td> <a href="admin-edit-user.php?id='. $row['user_id'] .'" class="btn btn-primary">Edit</a></td> ' .
+												'<td> <a href="admin-delete-user.php?id='. $row['user_id'] .'" class="btn btn-danger"> Delete </a> </td> ' .
+											'</tr>';
 								}
 								
 								echo '</table>';
